@@ -6,7 +6,7 @@ select amount of letters - input dropdown, min 6 max 12
 generate password btn - click as many times as they want
 display pw to user in dom each time btn clicked
 1. Array of possible letters / symbols - 4 SETS: UC, LC, NUMS, SYMS
-3. first, take the value from input dropdown
+3. first, take the value from input dropdown.
 4. value is inserted as argument in iteration func - amount of times to iterate and generate text
 5. func passes text generated to the dom
 6. safety buffers - ie, if more than 2 of the same letter find another
