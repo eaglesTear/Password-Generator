@@ -1,5 +1,4 @@
 /* 
-<<<<<<< HEAD
   ******************************
   PASSWORD GENERATOR: CHARACTERS
   ******************************
@@ -33,19 +32,6 @@ const copyBtn = document.querySelector(".copy-btn");
   The second loop runs through the rest of the password. It selects first a random array of the four main character arrays, and then selects a random character inside that random array. This is then published to the DOM on each loop. Note the passwordLength - 4 in the second loop statement: we always need to take off 4 cycles because 4 characters (cycles) are already printed in the first loop - this ensures that the password remains at the length specified by the user, instead of 4 characters longer!
 
   To round of the main function of this app, the copy password button is made visible now that a password has been generated.
-=======
-UI:
-Title
-Short description
-select amount of letters - input dropdown, min 6 max 12
-generate password btn - click as many times as they want
-display pw to user in dom each time btn clicked
-1. Array of possible letters / symbols - 4 SETS: UC, LC, NUMS, SYMS
-3. first, take the value from input dropdown.
-4. value is inserted as argument in iteration func - amount of times to iterate and generate text
-5. func passes text generated to the dom
-6. safety buffers - ie, if more than 2 of the same letter find another
->>>>>>> d8423ec13395c52149641b45094752491bbed665
 */
 
 const createPassword = (passwordLength) => {
