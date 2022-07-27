@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html lang="en-GB" dir="ltr">
   <head>
     <meta charset="utf-8" />
@@ -15,8 +11,16 @@
       content="password generator, online safety, random, JavaScript"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/jpg" sizes="32x32" href="images/shuffle.png" />
   </head>
+
   <body>
     <!--[if lt IE 7]>
       <p class="browsehappy">
@@ -24,24 +28,75 @@
         <a href="#">upgrade your browser</a> to improve your experience.
       </p>
     <![endif]-->
+    <div>
+      <!-- Layered background effect -->
 
-    <section class="app">
-      <h1>Password Generator</h1>
-      <h3>From 000 to hero</h3>
-      <p>Generate a random, secure password at the push of a button.</p>
-      <select name="" id="length">
-        <option value="" selected>Select password length</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-        <option value="11">11</option>
-        <option value="12">12</option>
-      </select>
-      <button type="button" id="generate">Generate</button>
-      <section id="password"></section>
-    </section>
+      <div class="bg"></div>
+      <div class="bg"></div>
+      <div class="bg"></div>
+
+      <!-- Main app content box -->
+
+      <section class="content">
+        <div class="flex-container">
+          <img src="images/shuffle.png" alt="shuffle arrow" />
+          <h1>Password Generator</h1>
+        </div>
+
+        <p>Generate a strong password at the push of a button.</p>
+
+        <!-- Dropdown section to select password length to be generated -->
+
+        <div class="flex-container">
+          <div class="menu">
+            <select id="pw-length">
+              <option value="" selected>Select password length</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+            </select>
+          </div>
+          <button type="button" id="generate">Generate</button>
+        </div>
+
+        <!-- Password is generated here along with copy password button  -->
+
+        <div id="password">Your new password:</div>
+        <button type="button" class="copy-btn">Copy Password</button>
+      </section>
+
+      <!-- Authour details & links -->
+
+      <footer>
+        Copyright &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        Ryan Hadley (eaglesTear)
+        <a href="https://www.linkedin.com/in/ryan-had">
+          <img src="images/linkedin.png" alt="LinkedIn logo" />
+        </a>
+        <a href="https://github.com/eaglesTear">
+          <img src="images/github.png" alt="GitHub logo" />
+        </a>
+      </footer>
+    </div>
+
+    <!-- Load main script -->
 
     <script src="script.js" async defer></script>
   </body>

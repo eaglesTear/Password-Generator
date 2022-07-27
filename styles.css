@@ -1,22 +1,148 @@
+/* Universal styles */
+
 * {
-  padding: 0;
+  font-family: "Dosis", sans-serif;
+  letter-spacing: 1.2px;
   margin: 0;
+  padding: 0;
 }
 
 body,
-html,
-.app {
-  height: 90%;
+html {
+  height: 100%;
   width: 100%;
 }
 
-.app {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+h1 {
+  font-size: 2.5rem;
 }
 
-.app > * {
+p {
+  font-size: 1.2rem;
+}
+
+/* Flex layouts for the app */
+
+body,
+.content,
+.flex-container,
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-container > * {
+  margin: 0 1rem;
+}
+
+.flex-container img {
+  width: 80px;
+}
+
+/* App split background design */
+
+.bg {
+  background-image: linear-gradient(-60deg, #325288 50%, #d96098 50%);
+  bottom: 0;
+  left: -50%;
+  opacity: 0.5;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1;
+}
+
+/* Main content box */
+
+.content {
+  flex-direction: column;
+  padding: 5vmin;
+}
+
+.content,
+footer {
+  background-color: #343434;
+  border-radius: 0.55em;
+  box-shadow: 0 0 0 2px #ffffff;
+  box-sizing: border-box;
+}
+
+.content > * {
   margin: 1rem;
+}
+
+#password {
+  font-size: 1.5rem;
+  letter-spacing: 4px;
+}
+
+/* Button styles */
+
+button {
+  border-radius: 6px;
+  color: #d96098;
+  display: inline-block;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background-color: #ffffff;
+}
+
+button:active {
+  position: relative;
+  top: 1px;
+}
+
+/* Copy password button: becomes visible only after password is generated (see script.js) */
+
+.copy-btn {
+  visibility: hidden;
+}
+
+.show-copy-btn {
+  visibility: visible;
+}
+
+/* Select dropdown where password length is chosen */
+
+.menu select {
+  padding: 8px;
+  text-align: center;
+  width: 240px;
+}
+
+.content,
+.menu select,
+footer {
+  color: #ffffff;
+}
+
+.menu select option {
+  padding: 30px;
+}
+
+button,
+.menu select {
+  cursor: pointer;
+  background-color: #325288;
+  border: 1px solid #ffffff;
+  font-size: 1rem;
+  letter-spacing: 2.5px;
+}
+
+/* Footer element */
+
+footer {
+  margin-top: 12%;
+  padding: 15px;
+}
+
+footer img {
+  height: 30px;
+  padding: 0 5px;
+  width: 30px;
 }
